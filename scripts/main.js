@@ -10,8 +10,7 @@ function getstationDetails(callbackIN)
 
 function callbackfxn(snap) {
     var stationDetails = [];
-    var dateInfo = [];
-    var waveHeight = [];
+    var chartValues = [];
     for (var key in snap) {
         // skip loop if the property is from prototype
         if (!snap.hasOwnProperty(key)) continue;
@@ -19,13 +18,18 @@ function callbackfxn(snap) {
         var obj = snap[key];
         stationDetails.push(obj);
     }
-
+    /*var oldest = stationDetails[0]["unixtime"];
     for (var i = 0; i < stationDetails.length; i++) {
-        console.log(snap[i]);
-        waveHeight.push(stationDetails[i]["Height"]);
-        dateInfo.push(stationDetails[i]["Hour"]);
+        if (oldest < stationDetails[i]["unixtime"])
+        {
+            oldest = stationDetails[i]["unixtime"];
+        }*/
+    for (var i = 0; i < stationDetails.length; i++) {
+        console.log(stationDetails[i]["unixtime"]);
+        chartValues.push([stationDetails[i]["unixtime"], stationDetails[i]["Height"]]);
+        console.log
     }
-
+    console.log(chartValues)
     zingchart.render({
         id:"waveHeight",
         width:"100%",
@@ -44,22 +48,25 @@ function callbackfxn(snap) {
             },
             "series":[
                 {
-                    "values": waveHeight,
-                    "timestamp": dateInfo
+                    "values": chartValues
                 }
             ],
             "scale-x": {
+                transform: {
+                    "all": "%m/%d/%y  %h:%i %A",
+                    'type' : "date"
+                },
                 "label": {
                     "text":"Hour"
                 }
             },
             "scale-y": {
                 "label": {
-                    "text":"Tide (m)"
+                    "text":"Wave Height (m)"
                 }
             }
-
         }
     });
+    
     return stationDetails;
 }
