@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "zing-chart-firebase-demo",
+  "private_key_id": "cdccebc515c8dd203fb8d5de84ca45805d04ac90",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCKuZLR4a7kdAn7\nMvOvz3Z8/IuAWB7uapeiQzw7YTdkZOzdX7pg5uLSsNYKe+9cBcUnXZNBM0OEkoX3\n7SzyBZaZl6l3xbBae4zBpFTAK+VnDHh2jlLUgijI1V/RS+aaXifY69I6wZXIB4VJ\nEq7VOWLbuE8zlGDYxGgogR1UM2tBdxI4GPYvpw0+IKTTciIylIjwPQYEKX+7yh2c\nhtewUtus4hhFEkPYt1cGbMduAZcgoar3xyUEQtIJlvVCf1X4M8wW2cnnEqfca2I2\n0jhmL8ZglUZ1hT1OsB3KDGti7z0RzPuPhBMvjFSGRqP/5jEsAhFjj9fLv7a5JaeW\nRi2RkVzJAgMBAAECggEAAykJHDjs+A1gsNVPUeEDDQPf1bOsOLg67hpkA+JKFcJq\n1vw4Tb7UygH3TlPWdx02iZgLI8AcOKfx310K2hSggq0+0hix1M3dvgeVWq9lUXyq\nPeEuJ+MzNKgPv7/f6AJfHAT7TBVe6Siqs6h2TSs6glDnlQA7WJTY3ptaZLGrLtmT\n/QrcR/o/Cj7zFm37BFadgLkjypMPFoHJpiVus7Y0AlXtbY0v/i8cz4zSgAPhmk9P\nnsigublyidxhZOyUXWoFzJEG1VnNjIvAT4Huiyh0wdJPayvx36YYToZqm+y8URef\nYSguCld2NLNu4rNZfftiEosBIoKh1ciHIyetF8HVUQKBgQDAqLXNXXDXoE2GfBEm\n+OAcpSXgItl+LEMdbYF5bcWgNPLwkVXX8h7L2Hw/kNAZ2qOjXAiQ2MQHD4VyLauY\nj6y6MsunnGB670yUakde2ophQqNXM3PD7oxX3MD7VzzHERAiIMsURlmpRNJAbkbB\nAMHuTaxD1GOyl6+PkQitkoWnDQKBgQC4VXUbpV5UZWnzwKXVnpchIf/pZr1J0peb\nM3cTpa0AZDn0hdlOWEKjwc6SWfSvIzMGZFFwRd8ctrIh+pjgj2JW5BXICRYoaIZk\n/Qaj3GgyJMrMigWimOaRLigXrogRNbs5qchk2CL4uxYnMIhB0Oit/H+rBqjyDjHd\nFxrSOd8drQKBgQCOHeW+UCdlaELH6c1dSklH2CtQY2S8xjncA2N3B5q4y1ZKT2tb\nmKdPB6rf2Rspdzcu0j0fXEd+TdzKlRX3vERWNhI02g3xoYSEFsH/HoblqBqFwNas\nudOdHKLexUN4NQYJptcnZZ3OV44hKTfYN47XE0T35DyHCY3gAcS9BVDCIQKBgQC3\ntlP0raeJrVkfWgztDhXJK72FvKNCg+QdBfnTVvdIwJsSHKQq9MPVuT5LlePK+OXN\npQWVQ83NLDf0rXDXvY9g0gjzSDsRIrtuws5vWSdvckO7/oMHPiPs5XeHwqZRoJ9s\nJM5X0yFni+3UOQZTsgV0AYaryQNv2r3Pf0t34b2AMQKBgA+O/jGxbWTdz+cRbnKe\nCMvFjPGLZpM7ks7EixZg6PTBQsEhYbH/8u0s6jasolCKh3HjkhfuKcT/cthsEUKE\nNTZBy2JirPyx1h5o9yrBHleeAwqTXA/xZL+f+zKt53Bww0lgmJ91EjrRXR0njyTy\nCWDfsvvBBhQhRFl7Rk1MS0x6\n-----END PRIVATE KEY-----\n",
+  "client_email": "zingchart-service-account@zing-chart-firebase-demo.iam.gserviceaccount.com",
+  "client_id": "116137855394911568792",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/zingchart-service-account%40zing-chart-firebase-demo.iam.gserviceaccount.com"
+}

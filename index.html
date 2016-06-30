@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdn.zingchart.com/zingchart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Maven+Pro" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAoODNh3wDCM0brDULDBJK6vHqOWplc1W8",
+            authDomain: "zing-chart-firebase-demo.firebaseapp.com",
+            databaseURL: "https://zing-chart-firebase-demo.firebaseio.com",
+            storageBucket: "zing-chart-firebase-demo.appspot.com",
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+<body>
+<div id="header">
+    <table>
+        <tr>
+            <td>
+                <h1>The Surf Report</h1>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>A ZingChart-Firebase Boilerplate Demo</h3>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="content">
+    <div id="currentTides">
+        <div id="waveHeight">
+
+        </div>
+    </div>
+    <div id="currentTidesAdjacent">
+        <p>
+            description goes here
+        </p>
+    </div>
+</div>
+<script src="bundle.js"></script>
+</body>
+</html>
