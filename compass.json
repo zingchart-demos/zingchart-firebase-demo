@@ -1,0 +1,80 @@
+{
+  "type": "gauge",
+  "background-color":"black",
+  "scale-r":{
+    "values":"0:100:20",
+    "line-color":"none",
+    "guide":{
+      "background-color":"black", // Set the interior color of the gauge so that it is solid black, not alternating colors
+      "alpha":1
+    },
+    "tick":{
+      "line-width":3,
+      "line-color":"white",
+      "size":14
+    },
+    "minor-ticks":4,
+    "minor-tick":{
+      "line-color":"white",
+      "visible":true,
+      "size":7,
+      "placement":"inner"
+    },
+    "item":{
+      "color":"white", // Set the color and font of the labels
+      "placement":"inner",
+      "offset-r":-55 // Move the labels to the inside
+    },
+    "aperture":270,
+    "center":{
+      "background-color":"#CC0000",
+      "size":11
+    },
+    "background-color":"black",
+    "ring":{
+      "type":"circle",
+      "size":8,
+      "rules":[
+        {
+          "rule":"%v<80",
+          "background-color":"red",
+          "border-width":0
+        },
+        {
+          "rule":"%v>=80",
+          "background-color":"limeGreen",
+          "border-width":0
+        }
+      ]
+    }
+  },
+  "shapes":[
+    {
+      "type":"pie", // Add a second ring to the outside
+      "size":190,
+      "x":"50%",
+      "y":"54.0%",
+      "background-color":"white limeGreen",
+      "z-index":0,
+      "slice":175
+    }
+  ],
+  "labels":[
+    {
+      "text":"85.67%",
+      "color":"white",
+      "width":"6%",
+      "x":"47%",
+      "y":"76%"
+    }
+  ],
+  "series" : [
+    {
+      "values" : [85.67],
+      "background-color":"limeGreen",
+      "shadow":false,
+      "size":70, // Set the length of the needle
+      "csize":10 // Set the width of the needle
+    }
+  ]
+}

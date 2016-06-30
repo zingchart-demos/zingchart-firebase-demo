@@ -14,7 +14,7 @@ firebase.initializeApp({
 });
 
 
-var job = new cron.CronJob('5 * * * *', function() {
+var job = new cron.CronJob('00,30 * * * *', function() {
     updateStationData("100");
 }, null, true);
 

@@ -48,7 +48,8 @@
 
 	function getstationDetails(callbackIN)
 	{
-	    firebase.database().ref("100").once('value').then(function(snapshot) {
+	    var stationRef = firebase.database().ref("100");
+	    stationRef.once('value').then(function(snapshot) {
 	        callbackIN(snapshot.val())
 	    });
 	}
@@ -64,21 +65,18 @@
 	        var obj = snap[key];
 	        stationDetails.push(obj);
 	    }
-	    /*var oldest = stationDetails[0]["unixtime"];
+	    var minHeight = stationDetails[0]["Height"];
 	    for (var i = 0; i < stationDetails.length; i++) {
-	        if (oldest < stationDetails[i]["unixtime"])
+	        if (stationDetails[i]["Height"] < minHeight)
 	        {
-	            oldest = stationDetails[i]["unixtime"];
-	        }*/
-	    for (var i = 0; i < stationDetails.length; i++) {
-	        console.log(stationDetails[i]["unixtime"]);
+	            minHeight = stationDetails[i]["Height"];
+	        }
 	        chartValues.push([stationDetails[i]["unixtime"], stationDetails[i]["Height"]]);
 	    }
-	    console.log(chartValues)
 	    zingchart.render({
 	        id:"waveHeight",
 	        width:"100%",
-	        height:400,
+	        height:"100%",
 	        data:{
 	            "type":"line",
 	            "title":{
@@ -97,8 +95,8 @@
 	                }
 	            ],
 	            "scale-x": {
-	                transform: {
-	                    "all": "%m/%d/%y  %h:%i %A",
+	                "transform": {
+	                    "all": "%m/%d/%Y  %h:%i %A",
 	                    'type' : "date"
 	                },
 	                "label": {
@@ -106,12 +104,14 @@
 	                }
 	            },
 	            "scale-y": {
+	                "minValue" : minHeight,
 	                "label": {
 	                    "text":"Wave Height (m)"
 	                }
 	            }
 	        }
 	    });
+
 	    return stationDetails;
 	}
 

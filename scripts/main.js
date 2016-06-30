@@ -2,7 +2,8 @@ window.addEventListener("load", getstationDetails(callbackfxn));
 
 function getstationDetails(callbackIN)
 {
-    firebase.database().ref("100").once('value').then(function(snapshot) {
+    var stationRef = firebase.database().ref("100");
+    stationRef.once('value').then(function(snapshot) {
         callbackIN(snapshot.val())
     });
 }
@@ -18,14 +19,18 @@ function callbackfxn(snap) {
         var obj = snap[key];
         stationDetails.push(obj);
     }
+    var minHeight = stationDetails[0]["Height"];
     for (var i = 0; i < stationDetails.length; i++) {
-        console.log(stationDetails[i]["unixtime"]);
+        if (stationDetails[i]["Height"] < minHeight)
+        {
+            minHeight = stationDetails[i]["Height"];
+        }
         chartValues.push([stationDetails[i]["unixtime"], stationDetails[i]["Height"]]);
     }
     zingchart.render({
         id:"waveHeight",
         width:"100%",
-        height:400,
+        height:"100%",
         data:{
             "type":"line",
             "title":{
@@ -45,7 +50,7 @@ function callbackfxn(snap) {
             ],
             "scale-x": {
                 "transform": {
-                    "all": "%m/%d/%y  %h:%i %A",
+                    "all": "%m/%d/%Y  %h:%i %A",
                     'type' : "date"
                 },
                 "label": {
@@ -53,6 +58,7 @@ function callbackfxn(snap) {
                 }
             },
             "scale-y": {
+                "minValue" : minHeight,
                 "label": {
                     "text":"Wave Height (m)"
                 }
