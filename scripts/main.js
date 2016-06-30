@@ -18,18 +18,10 @@ function callbackfxn(snap) {
         var obj = snap[key];
         stationDetails.push(obj);
     }
-    /*var oldest = stationDetails[0]["unixtime"];
-    for (var i = 0; i < stationDetails.length; i++) {
-        if (oldest < stationDetails[i]["unixtime"])
-        {
-            oldest = stationDetails[i]["unixtime"];
-        }*/
     for (var i = 0; i < stationDetails.length; i++) {
         console.log(stationDetails[i]["unixtime"]);
         chartValues.push([stationDetails[i]["unixtime"], stationDetails[i]["Height"]]);
-        console.log
     }
-    console.log(chartValues)
     zingchart.render({
         id:"waveHeight",
         width:"100%",
@@ -52,7 +44,7 @@ function callbackfxn(snap) {
                 }
             ],
             "scale-x": {
-                transform: {
+                "transform": {
                     "all": "%m/%d/%y  %h:%i %A",
                     'type' : "date"
                 },
@@ -67,6 +59,6 @@ function callbackfxn(snap) {
             }
         }
     });
-    
+
     return stationDetails;
 }

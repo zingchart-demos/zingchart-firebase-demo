@@ -73,7 +73,6 @@
 	    for (var i = 0; i < stationDetails.length; i++) {
 	        console.log(stationDetails[i]["unixtime"]);
 	        chartValues.push([stationDetails[i]["unixtime"], stationDetails[i]["Height"]]);
-	        console.log
 	    }
 	    console.log(chartValues)
 	    zingchart.render({
