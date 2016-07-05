@@ -14,7 +14,7 @@ firebase.initializeApp({
 });
 
 
-var job = new cron.CronJob('00,30 * * * *', function() {
+var job = new cron.CronJob('10,40 * * * *', function() {
     updateStationData("100");
 }, null, true);
 
@@ -44,7 +44,6 @@ function getHTML(stationNumber) {
     }
     request(options, callbackRequest);
 }
-
 function returnData(stationNumber,lineIn) {
     var i = 0;
     var dataArray = [0,0,0,0];
@@ -54,18 +53,18 @@ function returnData(stationNumber,lineIn) {
         switch (i) {
             case 0: //DATE
                 dataArray[0] = unixtime;
-                i = 17
+                i = 17;
                 break;
             case 17: //WAVE HEIGHT
                 dataArray[1] = parseFloat(lineIn.slice(17,22));
-                i = 23;
-                break;
-            case 23: //WAVE PERIOD
-                dataArray[2] = parseFloat(lineIn.slice(23,28));
                 i = 29;
                 break;
             case 29: //WAVE DIRECTION
                 dataArray[3] = parseFloat(lineIn.slice(29,34));
+                i = 44;
+                break;
+            case 44: //WAVE PERIOD
+                dataArray[2] = parseFloat(lineIn.slice(44,48));
                 i = lineIn.length;
                 break;
         }

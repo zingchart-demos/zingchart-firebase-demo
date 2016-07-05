@@ -56,40 +56,55 @@
 
 
 	function callbackfxn(snap) {
+	    //["#1d3955", "#224264", #647A92, "#eef3f9"]
 	    var stationDetails = [];
 	    var chartValues = [];
+	    var arrows = [];
+	    var degrees = [];
 	    for (var key in snap) {
 	        // skip loop if the property is from prototype
 	        if (!snap.hasOwnProperty(key)) continue;
-
 	        var obj = snap[key];
 	        stationDetails.push(obj);
 	    }
-	    var minHeight = stationDetails[0]["Height"];
 	    for (var i = 0; i < stationDetails.length; i++) {
-	        if (stationDetails[i]["Height"] < minHeight)
-	        {
-	            minHeight = stationDetails[i]["Height"];
-	        }
-	        chartValues.push([stationDetails[i]["unixtime"], stationDetails[i]["Height"]]);
+	        chartValues.push([(stationDetails[i]["unixtime"] - (3600000 * 7)), stationDetails[i]["Height"] * 3.28084]);
+	        degrees.push(stationDetails[i]["Direction"]);
+	        arrows.push({
+	            backgroundColor: "#224264",
+	            borderColor: "#224264",
+	            length: stationDetails[i]["Period"] * 3, //length of arrow
+	            direction: "bottom",
+	            from: {
+	                hook: "node:plot=0,index=" + i
+	            },
+	            angle: stationDetails[i]["Direction"]+180
+	        })
 	    }
 	    zingchart.render({
-	        id:"waveHeight",
-	        width:"100%",
-	        height:"100%",
-	        data:{
-	            "type":"line",
-	            "title":{
-	                "text":"Wave Heights over time"
+	        id: "waveHeight",
+	        width: "100%",
+	        height: "100%",
+	        data: {
+	            "background-color": "#eef3f9",
+	            "type": "line",
+	            "arrows": arrows,
+	            "title": {
+	                "text": "Wave Heights over time",
+	                "color": "#1d3955"
 	            },
-	            "plot":{
-	                "line-width":1,
-	                "aspect":"spline",
-	                "marker":{
-	                    "visible":false
+	            "chart": {
+	                "background-color": "#eef3f9"
+	            },
+	            "plot": {
+	                "line-color": "#647A92",
+	                "line-width": 3,
+	                "aspect": "spline",
+	                "marker": {
+	                    "visible": false
 	                }
 	            },
-	            "series":[
+	            "series": [
 	                {
 	                    "values": chartValues
 	                }
@@ -97,16 +112,29 @@
 	            "scale-x": {
 	                "transform": {
 	                    "all": "%m/%d/%Y  %h:%i %A",
-	                    'type' : "date"
+	                    'type': "date"
 	                },
 	                "label": {
-	                    "text":"Hour"
+	                    "text": "Time (UTC)",
+	                    "color": "#1d3955"
+	                },
+	                "line-color": "#d2d9e0",
+	                "line-width": 1.5,
+	                "tick": {
+	                    "line-color": "#d2d9e0",
+	                    "line-width": 1.5,
 	                }
 	            },
 	            "scale-y": {
-	                "minValue" : minHeight,
 	                "label": {
-	                    "text":"Wave Height (m)"
+	                    "text": "Wave Height (ft)",
+	                    "color": "#1d3955",
+	                },
+	                "line-color": "#d2d9e0",
+	                "line-width": 1.5,
+	                "tick": {
+	                    "line-color": "#d2d9e0",
+	                    "line-width": 1.5,
 	                }
 	            }
 	        }
@@ -114,6 +142,7 @@
 
 	    return stationDetails;
 	}
+
 
 /***/ }
 /******/ ]);

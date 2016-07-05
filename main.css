@@ -50,22 +50,16 @@ h3 {
 }
 
 #content {
-    height: 70vh;
+    height: 65vh;
     padding: 5vh;
     width: inherit;
 }
 
-#currentTides {
-    height: 60vh;
-    width: 60%;
+#waveDiv {
+    padding: 2vh;
     background-color: #eef3f9;
-    float: left;
-    margin-right: 5vh;
-}
-
-#currentTidesAdjacent {
-    width: 35%;
-    height: 60vh;
-    background-color: #eef3f9;
-    float: right;
+    border-radius: 2vh;
+    --webkit-box-shadow: 0px 0px 2vh 0vh #1d3955;
+    -moz-box-shadow: 0px 0px 2vh 0vh #1d3955;
+    box-shadow: 0px 0px 2vh 0vh #1d3955;
 }
