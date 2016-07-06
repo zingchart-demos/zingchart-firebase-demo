@@ -59,7 +59,38 @@ h3 {
     padding: 2vh;
     background-color: #eef3f9;
     border-radius: 2vh;
+    height:55vh;
+    width: inherit;
     --webkit-box-shadow: 0px 0px 2vh 0vh #1d3955;
     -moz-box-shadow: 0px 0px 2vh 0vh #1d3955;
     box-shadow: 0px 0px 2vh 0vh #1d3955;
+}
+#center {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#waveHeight {
+    width: 65vw;
+    padding-right: 10vw;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+#person {
+    max-height: 50vh;
+    max-width: 20vw;
+    display: inline-block;
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+p {
+    color: #224264;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 2vh;
+    vertical-align: middle;
 }

@@ -44,8 +44,10 @@
 /* 0 */
 /***/ function(module, exports) {
 
+	document.getElementById("person").onload = function () {
+	    document.getElementById("person").style.visibility = "visible";
+	};
 	window.addEventListener("load", getstationDetails(callbackfxn));
-
 	function getstationDetails(callbackIN)
 	{
 	    var stationRef = firebase.database().ref("100");
@@ -136,12 +138,53 @@
 	                    "line-color": "#d2d9e0",
 	                    "line-width": 1.5,
 	                }
+	            },
+	            'guide':{
+	                "plot-label":{
+	                    "visible":0
+	                },
+	                "scale-label":{
+	                    "visible":0
+	                }
 	            }
+
 	        }
 	    });
+	    var personImage = Snap("#person");
+	    var waterLevel = personImage.select("#waterLevel");
+	    var top = personImage.select("#top");
+	    top.attr({
+	        mask: waterLevel
+	    });
+	    num = 0;
+	    function animationLoop(height) {
+	        console.log(str = "M 0,"+ (820 - (height * 90 + Math.random()*(15))).toString()+ " C 0," + (820- (height * 90 - Math.random()*(3))).toString() + " 30," + (820- (height * 90 - Math.random()*(3))).toString() + " 45,"+ (820 - (height * 90 + Math.random()*(15))).toString()+ " 60," + (820- (height * 90 - Math.random()*(3))).toString() + " 75," + (820- (height * 90 - Math.random()*(3))).toString() + " 90,"+ (820 - (height * 90 + Math.random()*(15))).toString() + " 105," + (820- (height * 90 - Math.random()*(3))).toString() + " 120," + (820- (height * 90 - Math.random()*(3))).toString() + " 135,"+ (820 - (height*90 + Math.random()*(15))).toString() + " 150," + (820- (height * 90 - Math.random()*(3))).toString() + " 165," + (820- (height * 90 - Math.random()*(3))).toString() + " 180,"+ (820 - (height * 90 + Math.random()*(15))).toString()+ " 195," + (820- (height * 90 - Math.random()*(3))).toString() + " 210," + (820- (height * 90 - Math.random()*(3))).toString() + " 225,"+ (820 - (height * 90 + Math.random()*(15))).toString() + " 240," + (820- (height * 90 - Math.random()*(3))).toString() + " 255," + (820- (height * 90 - Math.random()*(3))).toString() + " 270,"+ (820 - (height * 90 + Math.random()*(15))).toString() + " 285," + (820- (height * 90 - Math.random()*(3))).toString() + " 300," + (820- (height * 90 - Math.random()*(3))).toString() + " 315," + (820 - (height * 90 + Math.random()*(15))).toString() + " 330,"+ (820- (height * 90 - Math.random()*(3))).toString() + " 360,"+ (821.5- (height * 90 - Math.random()*(3))).toString() + " 360,"+ (820 - (height * 90 + Math.random()*(15))).toString() + " L 360,820 0,820 Z"
+	        )
+	        waterLevel.animate({
+	            d:str}, 700);
+	    }
+	    zingchart.load = function () {
+	        num = chartValues[chartValues.length-1][1];
+	    };
+	    zingchart.guide_mousemove = function(p) {
+	        if (isNaN(p["items"][0]["value"]) == false)
+	        {
+	            num = p["items"][0]["value"];
+	        }
+	        else
+	        {
+	            num = chartValues[chartValues.length-1][1];
+	        }
+	    };
 
+	    var loop = setInterval(function () {
+	        animationLoop(num);
+	    },700)
 	    return stationDetails;
 	}
+
+
+
 
 
 /***/ }

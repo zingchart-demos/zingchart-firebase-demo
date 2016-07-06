@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Firebase Demo</title>
+    <script src="snap.svg-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -37,8 +38,15 @@
 </div>
 <div id="content">
     <div id="waveDiv">
-        <div id="waveHeight">
+        <div id="center">
+            <div id="waveHeight">
 
+            </div>
+            <object data="Waves.svg" id="person" type="image/svg+xml">
+            </object>
+            <p>
+                The chart on the left displays current surf trends. The y axis relates to wave height (ft), and the x to time. The direction of the arrows represents wave direction. The scale of the arrows relates to the period of the waves (s). On the right is a visualization of the selected wave height on a 6ft tall man with a 9ft surfboard next to him.
+            </p>
         </div>
     </div>
 </div>
