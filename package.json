@@ -1,0 +1,32 @@
+{
+  "name": "firebase-demo",
+  "version": "1.0.0",
+  "description": "This demo is an example of how ZingChart and Firebase can be integrated to create an engaging and interactive web app.",
+  "main": "bundle.js",
+  "dependencies": {
+    "cron": "^1.1.0",
+    "firebase-queue": "^1.4.0",
+    "fs": "^0.0.2",
+    "json-loader": "^0.5.4",
+    "request": "^2.65.0",
+    "net": "^1.0.2",
+    "firebase": "^3.1.0",
+    "tls": "^0.0.1",
+    "webpack": "^1.13.1",
+    "requirejs": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tessahelenmartin/zingchart-firebase-demo.git"
+  },
+  "author": "Tessa Martin, ZingChart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tessahelenmartin/zingchart-firebase-demo/issues"
+  },
+  "homepage": "https://github.com/tessahelenmartin/zingchart-firebase-demo#readme"
+}
