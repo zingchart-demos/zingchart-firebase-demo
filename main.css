@@ -56,14 +56,14 @@ h3 {
 }
 
 #waveDiv {
-    padding: 2vh;
     background-color: #eef3f9;
     border-radius: 2vh;
-    height:55vh;
+    height:60vh;
     width: inherit;
     --webkit-box-shadow: 0px 0px 2vh 0vh #1d3955;
     -moz-box-shadow: 0px 0px 2vh 0vh #1d3955;
     box-shadow: 0px 0px 2vh 0vh #1d3955;
+    padding: 2vh;
 }
 #center {
     height: fit-content;
@@ -81,6 +81,8 @@ h3 {
 
 }
 #person {
+    padding-left: 1vw;
+    padding-top: 2vh;
     max-height: 50vh;
     max-width: 20vw;
     display: inline-block;
@@ -89,8 +91,13 @@ h3 {
 }
 
 p {
+    text-align: center;
     color: #224264;
     font-family: 'Maven Pro', sans-serif;
     font-size: 2vh;
     vertical-align: middle;
+}
+
+#linkCDIP {
+    font-size: 1.5vh;
 }
