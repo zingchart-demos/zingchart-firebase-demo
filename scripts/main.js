@@ -50,7 +50,7 @@ function callbackfxn(snap) {
         height: "100%",
         data: {
             "background-color": "#eef3f9",
-            "type": "line",
+            "type": "area",
             "arrows": arrowsArray,
             "title": {
                 "text": "Wave Heights over time",
@@ -61,6 +61,7 @@ function callbackfxn(snap) {
             },
             "plot": {
                 "line-color": "#00baf0",
+                "font-color": "#1d3955",
                 "line-width": 3,
                 "aspect": "spline",
                 "marker": {
@@ -74,31 +75,55 @@ function callbackfxn(snap) {
             ],
             "scale-x": {
                 "transform": {
-                    "all": "%m/%d/%Y  %h:%i %A",
-                    'type': "date"
+                    "all": "%m/%d %h:%i %A",
+                    'type': "date",
+                    "color": "#1d3955"
                 },
                 "label": {
                     "text": "Time (UTC)",
                     "color": "#1d3955"
                 },
-                "line-color": "#d2d9e0",
+                "line-color": "#1d3955",
                 "line-width": 1.5,
-                "tick": {
-                    "line-color": "#d2d9e0",
-                    "line-width": 1.5,
-                }
+                "tick":{
+                    "line-color":"#1d3955",
+                    "line-width":2,
+                    "line-style":"solid",
+                    "size":12,
+                    "placement":"cross"
+                },
+                "item":{
+                    "font-color":"#1d3955",
+                    "font-size":12,
+                    "font-weight":"bold"
+                },
+
             },
             "scale-y": {
+                "color": "#1d3955",
                 "label": {
                     "text": "Wave Height (ft)",
                     "color": "#1d3955",
                 },
-                "line-color": "#d2d9e0",
+                "line-color": "#1d3955",
                 "line-width": 1.5,
-                "tick": {
-                    "line-color": "#d2d9e0",
-                    "line-width": 1.5,
-                }
+                "tick":{
+                    "line-color":"#1d3955",
+                    "line-width":2,
+                    "line-style":"solid",
+                    "size":12,
+                    "placement":"cross"
+                },
+                "guide": {
+                    "line-color":"#607488",
+                    "line-width":1,
+                    "line-style":"dashed",
+                },
+                "item":{
+                    "font-color":"#1d3955",
+                    "font-size":12,
+                    "font-weight":"bold"
+                },
             },
             "crosshair-x":{
                 "plot-label":{
@@ -107,7 +132,7 @@ function callbackfxn(snap) {
                 "scale-label":{
                     "visible":0
                 }
-            }
+            },
         }
     });
     var personImage = Snap("#person");
