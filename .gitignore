@@ -1,5 +1,6 @@
 #gitignore file#
 node_modules
 scripts/data_scripts.js
+scripts/iterate.js
 *.png
 .idea

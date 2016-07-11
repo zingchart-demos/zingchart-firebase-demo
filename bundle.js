@@ -80,16 +80,14 @@
 	        arrowsArray.push({
 	            backgroundColor: "#224264",
 	            borderColor: "#224264",
-	            length: stationDetails[i]["Period"] * 3, //length of arrow
-	            direction: "bottom",
+	            length: stationDetails[i]["Period"] * 5, //length of arrow
+	            direction: "top",
 	            from: {
 	                hook: "node:plot=0,index=" + i
 	            },
-	            angle: stationDetails[i]["Direction"]+180
+	            angle: stationDetails[i]["Direction"] +180
 	        })
 	    }
-	    console.log(snap)
-	    console.log(stationDetails)
 	    zingchart.render({
 	        id: "waveHeight",
 	        width: "100%",
