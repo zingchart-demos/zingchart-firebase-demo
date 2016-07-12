@@ -20,7 +20,7 @@ body {
     --webkit-box-shadow: 0px 1vh 2vh 0px #1d3955;
     -moz-box-shadow: 0px 1vh 2vh 0px #1d3955;
     box-shadow: 0px 1vh 2vh 0px #1d3955;
-    height: 20vh;
+    height: 20%;
 }
 
 table{
@@ -50,41 +50,32 @@ h3 {
 }
 
 #content {
-    height: 65vh;
-    padding: 5vh;
-    width: inherit;
+    height: 65%;
+    padding: 2.5%;
+    width: 95%;
 }
 
 #waveDiv {
     background-color: #eef3f9;
     border-radius: 2vh;
-    height:60vh;
-    width: inherit;
+    height:85%;
+    width: 95%;
+    padding: 2.5%;
     --webkit-box-shadow: 0px 0px 2vh 0vh #1d3955;
     -moz-box-shadow: 0px 0px 2vh 0vh #1d3955;
     box-shadow: 0px 0px 2vh 0vh #1d3955;
-    padding: 2vh;
-}
-#center {
-    height: fit-content;
-    width: fit-content;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 #waveHeight {
-    width: 65vw;
-    padding-right: 10vw;
+    width: 65%;
+    height:95%;
+    padding-right: 10%;
     display: inline-block;
     vertical-align: middle;
 
 }
 #person {
-    padding-left: 1vw;
-    padding-top: 2vh;
-    max-height: 50vh;
-    max-width: 20vw;
+    max-width: 20%;
+    max-height:95%;
     display: inline-block;
     vertical-align: middle;
     visibility: hidden;
@@ -97,8 +88,16 @@ p {
     font-size: 2vh;
     vertical-align: middle;
     font-weight: bold;
+    padding: 0;
 }
 
 #linkCDIP {
     font-size: 1.5vh;
+}
+
+#dataVisual {
+    height: 55%;
+}
+#text {
+    height: 40%
 }
