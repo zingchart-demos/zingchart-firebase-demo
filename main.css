@@ -67,8 +67,7 @@ h3 {
 }
 #waveHeight {
     width: 65%;
-    height:93%;
-    padding-top: 2%;
+    height:95%;
     padding-right: 10%;
     display: inline-block;
     vertical-align: middle;
@@ -76,7 +75,8 @@ h3 {
 }
 #person {
     max-width: 20%;
-    max-height:95%;
+    max-height:93%;
+    padding-top: 2%;
     display: inline-block;
     vertical-align: middle;
     visibility: hidden;

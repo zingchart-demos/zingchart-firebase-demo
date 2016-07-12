@@ -140,14 +140,14 @@
 	                    "font-color":"#1d3955",
 	                    "font-size":12,
 	                    "font-weight":"bold"
-	                },
+	                }
 
 	            },
 	            "scale-y": {
 	                "color": "#1d3955",
 	                "label": {
 	                    "text": "Wave Height (ft)",
-	                    "color": "#1d3955",
+	                    "color": "#1d3955"
 	                },
 	                "line-color": "#1d3955",
 	                "line-width": 1.5,
@@ -161,13 +161,13 @@
 	                "guide": {
 	                    "line-color":"#607488",
 	                    "line-width":1,
-	                    "line-style":"dashed",
+	                    "line-style":"dashed"
 	                },
 	                "item":{
 	                    "font-color":"#1d3955",
 	                    "font-size":12,
 	                    "font-weight":"bold"
-	                },
+	                }
 	            },
 	            "crosshair-x":{
 	                "plot-label":{
@@ -176,7 +176,7 @@
 	                "scale-label":{
 	                    "visible":0
 	                }
-	            },
+	            }
 	        }
 	    });
 	    var personImage = Snap("#person");
@@ -186,10 +186,6 @@
 	        waterLevel.animate({
 	            d:"M 0,"+ (820 - (height * 90 + Math.random()*(15))).toString()+ " C 0," + (820- (height * 90 - Math.random()*(3))).toString() + " 30," + (820- (height * 90 - Math.random()*(3))).toString() + " 45,"+ (820 - (height * 90 + Math.random()*(15))).toString()+ " 60," + (820- (height * 90 - Math.random()*(3))).toString() + " 75," + (820- (height * 90 - Math.random()*(3))).toString() + " 90,"+ (820 - (height * 90 + Math.random()*(15))).toString() + " 105," + (820- (height * 90 - Math.random()*(3))).toString() + " 120," + (820- (height * 90 - Math.random()*(3))).toString() + " 135,"+ (820 - (height*90 + Math.random()*(15))).toString() + " 150," + (820- (height * 90 - Math.random()*(3))).toString() + " 165," + (820- (height * 90 - Math.random()*(3))).toString() + " 180,"+ (820 - (height * 90 + Math.random()*(15))).toString()+ " 195," + (820- (height * 90 - Math.random()*(3))).toString() + " 210," + (820- (height * 90 - Math.random()*(3))).toString() + " 225,"+ (820 - (height * 90 + Math.random()*(15))).toString() + " 240," + (820- (height * 90 - Math.random()*(3))).toString() + " 255," + (820- (height * 90 - Math.random()*(3))).toString() + " 270,"+ (820 - (height * 90 + Math.random()*(15))).toString() + " 285," + (820- (height * 90 - Math.random()*(3))).toString() + " 300," + (820- (height * 90 - Math.random()*(3))).toString() + " 315," + (820 - (height * 90 + Math.random()*(15))).toString() + " 330,"+ (820- (height * 90 - Math.random()*(3))).toString() + " 360,"+ (821.5- (height * 90 - Math.random()*(3))).toString() + " 360,"+ (820 - (height * 90 + Math.random()*(15))).toString() + " L 360,820 0,820 Z"
 	        }, 700);
-	    }
-	    zingchart.load = function () {
-
-	        console.log("HERE")
 	    }
 	    zingchart.guide_mousemove = function(p) {
 	        if (isNaN(p["items"][0]["value"]) == false)
