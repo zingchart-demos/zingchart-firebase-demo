@@ -67,7 +67,8 @@ h3 {
 }
 #waveHeight {
     width: 65%;
-    height:95%;
+    height:93%;
+    padding-top: 2%;
     padding-right: 10%;
     display: inline-block;
     vertical-align: middle;
