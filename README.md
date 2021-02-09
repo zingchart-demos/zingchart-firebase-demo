@@ -1,14 +1,14 @@
-##zingchart-firebase-demo
+## zingchart-firebase-demo
 
 This demo is an example of how ZingChart and Firebase can be integrated to create an engaging and interactive web app.
 
 ## Client Side > Firebase
 [Firebase](http://www.firebase.com), a cloud services provider and backend as a service company, can be used to power the backend of an application, including data storage, user authentication, static hosting, and more. This demo connects to one of ZingChart's Firebase data stores to generate a chart on the client side.
 
-##Live Example
+## Live Example
 Check it out [here](https://examples.zingchart.com/tidal-charts/)
 
-###Usage
+### Usage
 1. Download or clone this repo.
 
 2. [Check out our tutorial]()
