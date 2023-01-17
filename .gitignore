@@ -4,3 +4,4 @@ scripts/data_scripts.js
 scripts/iterate.js
 *.png
 .idea
+.firebase/

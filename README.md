@@ -20,7 +20,7 @@ Check it out [here](https://examples.zingchart.com/tidal-charts/)
     ```
     {
       "hosting": {
-        "public": "./",
+        "public": "public",
         "ignore": [
           "firebase.json",
           "**/.*",
