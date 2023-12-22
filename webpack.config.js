@@ -2,9 +2,9 @@
  * Created by tmartin on 6/29/16.
  */
 module.exports = {
-    entry: "./scripts/main.js",
+    entry: "public/scripts/main.js",
     output: {
-        filename: "bundle.js"
+        filename: "public/bundle.js"
     },
     module: {
         loaders: [

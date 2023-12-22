@@ -10,7 +10,7 @@
     "json-loader": "^0.5.4",
     "request": "^2.65.0",
     "net": "^1.0.2",
-    "firebase": "^3.1.0",
+    "firebase": "^9.15.0",
     "tls": "^0.0.1",
     "webpack": "^5.75.0",
     "requirejs": "^2.2.0",
